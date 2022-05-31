@@ -45,9 +45,9 @@ public class Part06Request {
 
 		return repository
 				.findAll()
-				.doOnSubscribe(s -> System.out.println("Introducing "))
+				.doOnSubscribe(s -> System.out.println("Starring:"))
 				.doOnNext(p -> System.out.println(p.getFirstname() + " " + p.getLastname()))
-				.doOnComplete(() -> System.out.println("-Final-"));
+				.doOnComplete(() -> System.out.println("The end!"));
 	}
 
 }
